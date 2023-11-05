@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Tab Closer",
+  "version": "1.0",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+    "default_icon": {
+      "48": "icon48.png"
+  },
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
